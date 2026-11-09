@@ -124,10 +124,9 @@ void Chat(SOCKET client_socket){
     string selected_id;
 
     while (true) {
-        if (selected_id == "") {
-            selected_id = select_id();
-        }
 
+        selected_id = select_id();
+        
         string message = BuildMessage(selected_id);
         
         if (message.find("--exit") != string::npos) {
